@@ -14,9 +14,13 @@ function calculateTax() {
   const amountMinusTax = amount - taxAmount;
 
   // Update the display with formatted currency values
-  document.getElementById('totalWithTax').textContent = `$${Number(totalWithTax.toFixed()).toLocaleString()}`;
-  document.getElementById('taxAmount').textContent = `$${Number(taxAmount.toFixed()).toLocaleString()}`;
-  document.getElementById('minusTaxAmount').textContent = `$${Number(amountMinusTax.toFixed()).toLocaleString()}`;
+
+  // document.getElementById('totalWithTax').textContent = `$${Number(totalWithTax.toFixed()).toLocaleString()}`;
+  document.getElementById('totalWithTax').textContent = `$${totalWithTax.toLocaleString()}`;
+  // document.getElementById('taxAmount').textContent = `$${Number(taxAmount.toFixed()).toLocaleString()}`;
+  document.getElementById('taxAmount').textContent = `$${taxAmount.toLocaleString()}`;
+  // document.getElementById('minusTaxAmount').textContent = `$${Number(amountMinusTax.toFixed()).toLocaleString()}`;
+  document.getElementById('minusTaxAmount').textContent = `$${amountMinusTax.toLocaleString()}`;
 }
 
 // Function to clear all inputs and results
