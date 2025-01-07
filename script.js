@@ -14,9 +14,9 @@ function calculateTax() {
   const amountMinusTax = amount - taxAmount;
 
   // Update the display with formatted currency values
-  document.getElementById('totalWithTax').textContent = `$${totalWithTax.toFixed(2)}`;
-  document.getElementById('taxAmount').textContent = `$${taxAmount.toFixed(2)}`;
-  document.getElementById('minusTaxAmount').textContent = `$${amountMinusTax.toFixed(2)}`;
+  document.getElementById('totalWithTax').textContent = `$${Number(totalWithTax.toFixed()).toLocaleString()}`;
+  document.getElementById('taxAmount').textContent = `$${Number(taxAmount.toFixed()).toLocaleString()}`;
+  document.getElementById('minusTaxAmount').textContent = `$${Number(amountMinusTax.toFixed()).toLocaleString()}`;
 }
 
 // Function to clear all inputs and results
